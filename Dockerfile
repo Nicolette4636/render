@@ -8,5 +8,8 @@ RUN apt-get update && \
 RUN echo 'root:hudson' | chpasswd
 
 EXPOSE 22
+EXPOSE 80
+EXPOSE 443
+EXPOSE 8888
 
 CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
